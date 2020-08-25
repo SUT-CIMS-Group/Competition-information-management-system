@@ -1179,10 +1179,11 @@
       <DataType>varchar(25)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="293" name="lPower">
+    <column id="300" parent="293" name="lpower">
       <Position>4</Position>
-      <Comment>用户权限</Comment>
       <DataType>tinyint unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;2&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="301" parent="293" name="login_lid_idx">
@@ -1194,7 +1195,7 @@
       <ColNames>lId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="303" parent="294" name="pid">
+    <column id="303" parent="294" name="pId">
       <Position>1</Position>
       <Comment>项目id</Comment>
       <DataType>int|0s</DataType>
@@ -1239,12 +1240,12 @@
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="310" parent="294" name="project_pid_idx">
-      <ColNames>pid</ColNames>
+      <ColNames>pId</ColNames>
       <Type>btree</Type>
     </index>
     <key id="311" parent="294" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>pid</ColNames>
+      <ColNames>pId</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="312" parent="295" name="sId">

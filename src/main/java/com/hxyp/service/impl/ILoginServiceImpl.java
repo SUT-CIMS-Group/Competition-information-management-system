@@ -50,4 +50,16 @@ public class ILoginServiceImpl implements ILoginService {
         }
         return loginMapper.insertLogin(login) == 1 ? true : false;
     }
+
+    @Override
+    public boolean updateUser(Login login) {
+        if (loginMapper.updateLogin(login) == 1) return true;
+        return false;
+    }
+
+    @Override
+    public boolean deleteUser(Login login) {
+        if (loginMapper.deleteLogin(login) == 1) return true;
+        return false;
+    }
 }

@@ -56,4 +56,22 @@ public class LoginController {
         }
         return "增加失败";
     }
+
+    //更改用户
+    @RequestMapping("/updateUser")
+    public String updateUser(Login login){
+        if (iLoginService.updateUser(login)){
+            return "修改成功";
+        }
+        return "修改失败";
+    }
+
+    //删除用户
+    @RequestMapping("/deleteUser")
+    public String deleteUser(Login login){
+        if (iLoginService.deleteUser(login)){
+            return "删除成功";
+        }
+        return "删除失败";
+    }
 }

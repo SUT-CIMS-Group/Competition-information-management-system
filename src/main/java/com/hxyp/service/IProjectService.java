@@ -1,8 +1,8 @@
 /**
  * Copyright (C), 2015-2020, XXX有限公司
- * FileName: ILoginService
+ * FileName: IProjectService
  * Author:   Dell-Elite
- * Date:     2020/8/25 8:49
+ * Date:     2020/8/25 15:07
  * Description:
  * History:
  * <author>          <time>          <version>          <desc>
@@ -11,8 +11,8 @@
 
 package com.hxyp.service;
 
-import com.hxyp.entity.Login;
-import org.springframework.stereotype.Service;
+import com.hxyp.entity.Project;
+import com.sun.istack.internal.NotNull;
 
 /**
  * 〈一句话功能简述〉<br> 
@@ -22,14 +22,6 @@ import org.springframework.stereotype.Service;
  * @create 2020/8/25
  * @since 1.0.0
  */
-public interface ILoginService {
-    boolean checkLogin(Login login);
-
-    Integer identDiscrimination(Login login);
-
-    boolean insertNewUser(Login login);
-
-    boolean updateUser(Login login);
-
-    boolean deleteUser(Login login);
+public interface IProjectService {
+    boolean insertProject(Project project);
 }

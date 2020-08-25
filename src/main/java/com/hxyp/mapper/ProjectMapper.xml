@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hxyp.mapper.ProjectMapper">
+    <!--   新增项目 -->
+    <insert id="insertProject" parameterType="project" useGeneratedKeys="true" keyProperty="pId">
+        insert into project(pName,pSchResult,pEnProv,pProvResult,pEnNation,pNaResult) values (#{pName},#{pSchResult},#{pEnProv},#{pProvResult},#{pEnNation},#{pNaResult});
+    </insert>
+
+    <!--  删除项目通过项目名  -->
+    <delete id="deleteProject" parameterType="String">
+    delete from project where pName=#{projectName}
+    </delete>
+
+    <!--  修改项目信息  -->
+    <update id="updateProject" parameterType="project">
+    update Project set pName=#{pName},pSchResult=#{pSchResult},pEnProv=#{pEnProv},pProvResult=#{pProvResult},pEnNation=#{pEnNation},pNaResult=#{pNaResult} where pId=#{pId}
+    </update>
+
+    <!--    -->
+    <select id="selectProByName" parameterType="String" resultType="project">
+    select pId,pName,pSchResult,pEnProv,pProvResult,pEnNation,pNaResult from project where pName=#{pName}
+    </select>
+
+    <!--    -->
+    <select id="selectAllProjects" resultType="project">
+        select pId,pName,pSchResult,pEnProv,pProvResult,pEnNation,pNaResult from project
+    </select>
+</mapper>

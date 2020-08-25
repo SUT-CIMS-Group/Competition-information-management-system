@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hxyp.mapper.StudentMapper">
+    <!--   新增学生 -->
+    <insert id="insertStudent" parameterType="student" useGeneratedKeys="true" keyProperty="sId">
+        insert into student(sName,sNumber,sMajor,sCollege,sPhone,sManager) values (#{sName},#{sNumber},#{sMajor},#{sCollege},#{sPhone},#{sManager});
+    </insert>
+
+    <!--  删除学生通过学生名  -->
+    <delete id="deleteStudent" parameterType="int">
+    delete from student where sId=#{sId}
+    </delete>
+
+    <!--  修改学生信息  -->
+    <update id="updateStudent" parameterType="student">
+    update Student set sName=#{sName},sNumber=#{sNumber},sMajor=#{sMajor},sCollege=#{sCollege},sPhone=#{sPhone},sManager=#{sManager} where sId=#{sId}
+    </update>
+
+    <!--    -->
+    <select id="selectAllStudents" resultType="student">
+        select sId,sName,sNumber,sMajor,sCollege,sPhone,sManager from student
+        <where>
+            <if test="sName!=null and sName!=''">
+                and sName=#{sName}
+            </if>
+        </where>
+    </select>
+</mapper>
