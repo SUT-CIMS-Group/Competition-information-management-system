@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -28,11 +29,12 @@ import org.springframework.web.servlet.ModelAndView;
  * @create 2020/8/25
  * @since 1.0.0
  */
-@Controller
+@RestController
 public class LoginController {
     @Autowired
     private ILoginService iLoginService;
 
+    //登录验证
     @RequestMapping("/login")
     public String login(String username, String password){
         Login login = new Login();
@@ -44,5 +46,14 @@ public class LoginController {
             return result == 1 ? "front/teacher" : "front/student";
         }
         return "error";
+    }
+
+    //增加新用户
+    @RequestMapping("/addUser")
+    public String addUser(Login login){
+        if(iLoginService.insertNewUser(login)){
+            return "增加成功";
+        }
+        return "增加失败";
     }
 }

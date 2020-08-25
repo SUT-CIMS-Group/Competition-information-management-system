@@ -26,4 +26,6 @@ public interface ILoginService {
     boolean checkLogin(Login login);
 
     Integer identDiscrimination(Login login);
+
+    boolean insertNewUser(Login login);
 }

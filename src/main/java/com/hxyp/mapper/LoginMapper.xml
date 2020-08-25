@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hxyp.mapper.LoginMapper">
-<!--    查询登录用户是否存在-->
+    <!--    查询登录用户是否存在-->
     <select id="findLogin" parameterType="login" resultType="int">
         select lPower from login where lName=#{lName} and lPassword=#{lPassword}
     </select>
+
+    <insert id="insertLogin" parameterType="login">
+        insert into login(lName,lPassword,lPower) values(#{lName},#{lPassword},#{lPower});
+    </insert>
 </mapper>

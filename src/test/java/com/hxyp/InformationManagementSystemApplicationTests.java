@@ -16,7 +16,7 @@ class InformationManagementSystemApplicationTests {
 
     @Test
     void contextLoads() {
-        System.out.println(loginMapper.findLogin(new Login(null,"admin","admin",null)));
+        System.out.println(loginMapper.insertLogin(new Login(null,"小黄","123",2)));
     }
 
 }

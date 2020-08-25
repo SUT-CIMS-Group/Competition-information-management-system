@@ -29,4 +29,7 @@ import org.springframework.stereotype.Repository;
 public interface LoginMapper {
     //通过判断账号密码返回lPower类型，来确定身份
     Integer findLogin(Login login);
+
+//    增加新用户
+    int insertLogin(Login login);
 }

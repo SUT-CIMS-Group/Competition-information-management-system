@@ -14,6 +14,7 @@ package com.hxyp.service.impl;
 import com.hxyp.entity.Login;
 import com.hxyp.mapper.LoginMapper;
 import com.hxyp.service.ILoginService;
+import com.sun.istack.internal.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,5 +41,13 @@ public class ILoginServiceImpl implements ILoginService {
     public Integer identDiscrimination(Login login) {
         Integer discrimination = loginMapper.findLogin(login);
         return discrimination != null ? discrimination : -1;
+    }
+
+    @Override
+    public boolean insertNewUser(@NotNull Login login) {
+        if (checkLogin(login)) {
+            return false;
+        }
+        return loginMapper.insertLogin(login) == 1 ? true : false;
     }
 }
