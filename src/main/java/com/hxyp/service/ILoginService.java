@@ -31,5 +31,5 @@ public interface ILoginService {
 
     boolean updateUser(Login login);
 
-    boolean deleteUser(Login login);
+    boolean deleteUser(Integer lId);
 }

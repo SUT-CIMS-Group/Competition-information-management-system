@@ -1,8 +1,8 @@
 /**
  * Copyright (C), 2015-2020, XXX有限公司
- * FileName: Team
+ * FileName: Teacher
  * Author:   Dell-Elite
- * Date:     2020/8/25 16:00
+ * Date:     2020/8/25 17:06
  * Description:
  * History:
  * <author>          <time>          <version>          <desc>
@@ -26,7 +26,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Team {
-    private String teamName;
-    private Student[] students;
+public class Teacher {
+    private Integer tId;
+    private String tName;
+    private String tPhone;
+    private String tNumber;
 }

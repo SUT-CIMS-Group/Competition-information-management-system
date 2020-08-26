@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6782f8b-7f21-4ee6-950b-b500b7080937" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/entity/Project.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/entity/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/entity/Team.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/mapper/ProjectMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/mapper/ProjectMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/mapper/StudentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/mapper/StudentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/service/IProjectService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/service/impl/IProjectServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hxyp/InformationManagementSystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/InformationManagementSystemApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hxyp/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hxyp/entity/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/entity/Team.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hxyp/mapper/LoginMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/mapper/LoginMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hxyp/mapper/LoginMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/mapper/LoginMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hxyp/mapper/ProjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/mapper/ProjectMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hxyp/mapper/ProjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/mapper/ProjectMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hxyp/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/mapper/StudentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hxyp/service/ILoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/service/ILoginService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hxyp/service/impl/ILoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/service/impl/ILoginServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/hxyp/InformationManagementSystemApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hxyp/InformationManagementSystemApplicationTests.java" afterDir="false" />
@@ -60,7 +57,7 @@
         <item name="competitionDB" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="competition: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="student: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="project: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -69,8 +66,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -114,6 +111,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../团队开发/Competition-information-management-system/pom.xml" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
@@ -124,7 +122,22 @@
       <recent name="F:\university papers大学文件\大三上学期\竞赛管理系统\实际操作\Competition-information-management-system\src\main\resources\static" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.InformationManagementSystemApplicationTests.testInsertStudent">
+  <component name="RunManager" selected="JUnit.InformationManagementSystemApplicationTests.testInsertProject">
+    <configuration name="InformationManagementSystemApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Competition-information-management-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hxyp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hxyp" />
+      <option name="MAIN_CLASS_NAME" value="com.hxyp.InformationManagementSystemApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InformationManagementSystemApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="Competition-information-management-system" />
       <extension name="coverage">
@@ -141,7 +154,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InformationManagementSystemApplicationTests.testDeleteStudent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InformationManagementSystemApplicationTests.testDeleteProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Competition-information-management-system" />
       <extension name="coverage">
         <pattern>
@@ -151,13 +164,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.hxyp" />
       <option name="MAIN_CLASS_NAME" value="com.hxyp.InformationManagementSystemApplicationTests" />
-      <option name="METHOD_NAME" value="testDeleteStudent" />
+      <option name="METHOD_NAME" value="testDeleteProject" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InformationManagementSystemApplicationTests.testInsertStudent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InformationManagementSystemApplicationTests.testFindLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Competition-information-management-system" />
       <extension name="coverage">
         <pattern>
@@ -167,11 +180,69 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.hxyp" />
       <option name="MAIN_CLASS_NAME" value="com.hxyp.InformationManagementSystemApplicationTests" />
-      <option name="METHOD_NAME" value="testInsertStudent" />
+      <option name="METHOD_NAME" value="testFindLogin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="InformationManagementSystemApplicationTests.testInsertProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Competition-information-management-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hxyp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hxyp" />
+      <option name="MAIN_CLASS_NAME" value="com.hxyp.InformationManagementSystemApplicationTests" />
+      <option name="METHOD_NAME" value="testInsertProject" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InformationManagementSystemApplicationTests.testUpdateLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Competition-information-management-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hxyp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hxyp" />
+      <option name="MAIN_CLASS_NAME" value="com.hxyp.InformationManagementSystemApplicationTests" />
+      <option name="METHOD_NAME" value="testUpdateLogin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="information-management-system [install]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="install" />
+                <option value="-Dmaven.test.skip=true" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
     <configuration name="InformationManagementSystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Competition-information-management-system" />
@@ -182,8 +253,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InformationManagementSystemApplicationTests.testInsertStudent" />
-        <item itemvalue="JUnit.InformationManagementSystemApplicationTests.testDeleteStudent" />
+        <item itemvalue="JUnit.InformationManagementSystemApplicationTests.testInsertProject" />
+        <item itemvalue="JUnit.InformationManagementSystemApplicationTests" />
+        <item itemvalue="JUnit.InformationManagementSystemApplicationTests.testUpdateLogin" />
+        <item itemvalue="JUnit.InformationManagementSystemApplicationTests.testDeleteProject" />
+        <item itemvalue="JUnit.InformationManagementSystemApplicationTests.testFindLogin" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +272,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598279504583</updated>
       <workItem from="1598279508662" duration="20748000" />
-      <workItem from="1598343878124" duration="394000" />
+      <workItem from="1598343878124" duration="7810000" />
     </task>
     <servers />
   </component>
@@ -222,42 +296,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="436" y="101" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598325002523" />
-    <state x="499" y="111" key="FileChooserDialogImpl" timestamp="1598280106767">
+    <state x="305" y="0" key="#information-management-system_[install]" timestamp="1598401547705">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="111" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1598280106767" />
-    <state width="1483" height="270" key="GridCell.Tab.0.bottom" timestamp="1598344144408">
+    <state x="305" y="0" key="#information-management-system_[install]/0.0.1536.824@0.0.1536.824" timestamp="1598401547705" />
+    <state x="499" y="94" key="FileChooserDialogImpl" timestamp="1598402202969">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="270" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1598344144408" />
-    <state width="1483" height="270" key="GridCell.Tab.0.center" timestamp="1598344144408">
+    <state x="499" y="94" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1598402202969" />
+    <state width="1483" height="270" key="GridCell.Tab.0.bottom" timestamp="1598402488690">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="270" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1598344144408" />
-    <state width="1483" height="270" key="GridCell.Tab.0.left" timestamp="1598344144407">
+    <state width="1483" height="270" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1598402488690" />
+    <state width="1483" height="270" key="GridCell.Tab.0.center" timestamp="1598402488690">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="270" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1598344144407" />
-    <state width="1483" height="270" key="GridCell.Tab.0.right" timestamp="1598344144408">
+    <state width="1483" height="270" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1598402488690" />
+    <state width="1483" height="270" key="GridCell.Tab.0.left" timestamp="1598402488690">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="270" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1598344144408" />
-    <state width="1483" height="270" key="GridCell.Tab.1.bottom" timestamp="1598344144409">
+    <state width="1483" height="270" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1598402488690" />
+    <state width="1483" height="270" key="GridCell.Tab.0.right" timestamp="1598402488690">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="270" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1598344144409" />
-    <state width="1483" height="270" key="GridCell.Tab.1.center" timestamp="1598344144409">
+    <state width="1483" height="270" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1598402488690" />
+    <state width="1483" height="270" key="GridCell.Tab.1.bottom" timestamp="1598402488691">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="270" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1598344144409" />
-    <state width="1483" height="270" key="GridCell.Tab.1.left" timestamp="1598344144408">
+    <state width="1483" height="270" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1598402488691" />
+    <state width="1483" height="270" key="GridCell.Tab.1.center" timestamp="1598402488691">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="270" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1598344144408" />
-    <state width="1483" height="270" key="GridCell.Tab.1.right" timestamp="1598344144409">
+    <state width="1483" height="270" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1598402488691" />
+    <state width="1483" height="270" key="GridCell.Tab.1.left" timestamp="1598402488691">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="270" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1598344144409" />
+    <state width="1483" height="270" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1598402488691" />
+    <state width="1483" height="270" key="GridCell.Tab.1.right" timestamp="1598402488691">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1483" height="270" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1598402488691" />
     <state width="1483" height="238" key="GridCell.Tab.2.bottom" timestamp="1598339815581">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -282,6 +360,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="261" y="81" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1598282097416" />
+    <state x="333" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598366947854">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="333" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1598366947854" />
     <state x="341" y="183" key="run.anything.popup" timestamp="1598343217029">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -37,9 +37,6 @@ public interface ProjectMapper {
 //    修改项目信息
     int updateProject(Project project);
 
-//    查询指定项目信息，通过项目名称
-    Project selectProByName(String pName);
-
 //    查询所有项目信息
-    List<Project> selectAllProjects();
+    List<Project> selectAllProjects(String pName);
 }

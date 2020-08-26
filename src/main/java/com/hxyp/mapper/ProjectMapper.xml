@@ -16,13 +16,13 @@
     update Project set pName=#{pName},pSchResult=#{pSchResult},pEnProv=#{pEnProv},pProvResult=#{pProvResult},pEnNation=#{pEnNation},pNaResult=#{pNaResult} where pId=#{pId}
     </update>
 
-    <!--    -->
-    <select id="selectProByName" parameterType="String" resultType="project">
-    select pId,pName,pSchResult,pEnProv,pProvResult,pEnNation,pNaResult from project where pName=#{pName}
-    </select>
-
-    <!--    -->
-    <select id="selectAllProjects" resultType="project">
+    <!--   查找所有项目或指定项目 -->
+    <select id="selectAllProjects" resultType="project" parameterType="String">
         select pId,pName,pSchResult,pEnProv,pProvResult,pEnNation,pNaResult from project
+        <where>
+            <if test="pName!=null and pName!=''">
+                and pName=#{pName}
+            </if>
+        </where>
     </select>
 </mapper>

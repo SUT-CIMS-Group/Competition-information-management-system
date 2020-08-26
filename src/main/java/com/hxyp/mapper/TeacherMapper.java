@@ -1,8 +1,8 @@
 /**
  * Copyright (C), 2015-2020, XXX有限公司
- * FileName: LoginMapper
+ * FileName: TeacherMapper
  * Author:   Dell-Elite
- * Date:     2020/8/24 23:57
+ * Date:     2020/8/25 17:10
  * Description:
  * History:
  * <author>          <time>          <version>          <desc>
@@ -11,31 +11,32 @@
 
 package com.hxyp.mapper;
 
-import com.hxyp.entity.Login;
+import com.hxyp.entity.Teacher;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 
 /**
  * 〈一句话功能简述〉<br> 
  * 〈〉
  *
  * @author Dell-Elite
- * @create 2020/8/24
+ * @create 2020/8/25
  * @since 1.0.0
  */
 @Repository
 @Mapper
-public interface LoginMapper {
-//    通过判断账号密码返回lPower类型，来确定身份
-    Integer findLogin(Login login);
+public interface TeacherMapper {
+    //    增加老师
+    int insertTeacher(Teacher teacher);
 
-//    增加新用户
-    int insertLogin(Login login);
+    //    删除指定老师
+    int deleteTeacher(String tNumber);
 
-//    修改用户
-    int updateLogin(Login login);
+    //    修改老师信息
+    int updateTeacher(Teacher teacher);
 
-//    删除用户
-    int deleteLogin(Integer lId);
+    //    查询所有老师信息
+    List<Teacher> selectAllTeachers(String tName);
 }

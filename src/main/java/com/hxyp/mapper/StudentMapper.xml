@@ -16,7 +16,7 @@
     update Student set sName=#{sName},sNumber=#{sNumber},sMajor=#{sMajor},sCollege=#{sCollege},sPhone=#{sPhone},sManager=#{sManager} where sId=#{sId}
     </update>
 
-    <!--    -->
+    <!--  查找所有学生或者指定学生  -->
     <select id="selectAllStudents" resultType="student">
         select sId,sName,sNumber,sMajor,sCollege,sPhone,sManager from student
         <where>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hxyp.mapper.TeacherMapper">
+    <!--   新增老师 -->
+    <insert id="insertTeacher" parameterType="teacher" useGeneratedKeys="true" keyProperty="tId">
+        insert into teacher(tName,tPhone,tNumber) values (#{tName},#{tPhone},#{tNumber});
+    </insert>
+
+    <!--  删除老师通过老师工号  -->
+    <delete id="deleteTeacher" parameterType="String">
+    delete from teacher where tNumber=#{tNumber}
+    </delete>
+
+    <!--  修改老师信息  -->
+    <update id="updateTeacher" parameterType="teacher">
+    update Teacher set tName=#{tName},tPhone=#{tPhone},tNumber=#{tNumber} where tId=#{tId}
+    </update>
+
+    <!--   查找所有老师或特定老师 -->
+    <select id="selectAllTeachers" resultType="teacher">
+        select tId,tName,tPhone,tNumber from teacher
+        <where>
+            <if test="tName!=null and tName!=''">
+                and tName=#{tName}
+            </if>
+        </where>
+    </select>
+</mapper>

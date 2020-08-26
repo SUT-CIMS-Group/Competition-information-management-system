@@ -58,8 +58,8 @@ public class ILoginServiceImpl implements ILoginService {
     }
 
     @Override
-    public boolean deleteUser(Login login) {
-        if (loginMapper.deleteLogin(login) == 1) return true;
+    public boolean deleteUser(Integer lId) {
+        if (loginMapper.deleteLogin(lId) == 1) return true;
         return false;
     }
 }

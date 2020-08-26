@@ -7,17 +7,17 @@
     </select>
 
 <!--    增加一个新用户，不加id号-->
-    <insert id="insertLogin" parameterType="login">
+    <insert id="insertLogin" parameterType="login" keyProperty="lId" useGeneratedKeys="true">
         insert into login(lName,lPassword,lPower) values(#{lName},#{lPassword},#{lPower});
     </insert>
 
 <!--    修改用户信息，通过id-->
     <update id="updateLogin" parameterType="login">
-        update login set lId=#{lId},lName=#{lName},lPassword=#{lPassword},lPower=#{lPower} where lId=#{lId}
+        update login set lName=#{lName},lPassword=#{lPassword},lPower=#{lPower} where lId=#{lId}
     </update>
 
 <!--    删除指定用户-->
-    <delete id="deleteLogin" parameterType="login">
-        delete from login where lId=#{lId} and lName=#{lName} and lPassword=#{lPassword} and lPower=#{lPower}
+    <delete id="deleteLogin" parameterType="int">
+        delete from login where lId=#{lId}
     </delete>
 </mapper>

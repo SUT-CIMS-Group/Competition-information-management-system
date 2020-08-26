@@ -68,8 +68,8 @@ public class LoginController {
 
     //删除用户
     @RequestMapping("/deleteUser")
-    public String deleteUser(Login login){
-        if (iLoginService.deleteUser(login)){
+    public String deleteUser(Integer lId){
+        if (iLoginService.deleteUser(lId)){
             return "删除成功";
         }
         return "删除失败";
