@@ -34,31 +34,42 @@ public class ILoginServiceImpl implements ILoginService {
 
     @Override
     public boolean checkLogin(@NotNull Login login) {
-        return loginMapper.findLogin(login.getLName(),login.getLPassword()) != null;
+        return loginMapper.findLogin(login.getLName(), login.getLPassword()) != null;
     }
 
     @Override
-    public Integer identDiscrimination(String lName,String lPassword) {
-        Login discrimination = loginMapper.findLogin(lName,lPassword);
+    public Integer identDiscrimination(@NotNull String lName, @NotNull String lPassword) {
+        Login discrimination = loginMapper.findLogin(lName, lPassword);
         return discrimination != null ? discrimination.getLPower() : -1;
     }
 
     @Override
     public boolean insertNewUser(@NotNull Login login) {
-        if (checkLogin(login)) {
-            return false;
+        String lName = login.getLName();
+        String lPassword = login.getLPassword();
+        Integer lPower = login.getLPower();
+        if (lName != null && lPassword != null && lPower != null && !checkLogin(login)) {
+            if (!(lPower < 1 || lPower > 3)) { //身份代表编号仅仅有1、2、3
+                return loginMapper.insertLogin(login) == 1 ? true : false;
+            }
         }
-        return loginMapper.insertLogin(login) == 1 ? true : false;
-    }
-
-    @Override
-    public boolean updateUser(Login login) {
-        if (loginMapper.updateLogin(login) == 1) return true;
         return false;
     }
 
     @Override
-    public boolean deleteUser(Integer lId) {
+    public boolean updateUser(@NotNull Login login) {
+        Integer lId = login.getLId();
+        Integer lPower = login.getLPower();
+        if (lId == null || lPower == null) {
+            return false;
+        } else if (loginMapper.updateLogin(login) == 1) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean deleteUser(@NotNull Integer lId) {
         if (loginMapper.deleteLogin(lId) == 1) return true;
         return false;
     }

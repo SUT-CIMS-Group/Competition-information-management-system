@@ -17,35 +17,35 @@
 			window.scrollTo(0, 1);
 		}
 	</script>
-	<!-- Meta tag Keywords -->
-	<!-- css files -->
+<!--	 Meta tag Keywords-->
+<!--	 css files-->
 	<link rel="stylesheet" th:href="@{./static/css/style.css}" type="text/css" media="all" />
-	<!-- Style-CSS -->
+<!--	 Style-CSS-->
 	<link rel="stylesheet" th:href="@{./static/css/fontawesome-all.css}">
-	<!-- Font-Awesome-Icons-CSS -->
-	<!-- //css files -->
-	<!-- web-fonts -->
+<!--	 Font-Awesome-Icons-CSS-->
+<!--	 //css files-->
+<!--	 web-fonts-->
 	<link href="http://maxcdn.bootstrapcdn.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<link href="http://maxcdn.bootstrapcdn.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-	<!-- //web-fonts -->
+<!--	 //web-fonts-->
 </head>
 
 <body>
-	<!-- bg effect -->
+<!--	 bg effect-->
 	<div id="bg">
 		<canvas></canvas>
 		<canvas></canvas>
 		<canvas></canvas>
 	</div>
-	<!-- //bg effect -->
-	<!-- title -->
+<!--	 //bg effect-->
+<!--	 title-->
 	<h1>竞赛信息管理系统</h1>
-	<!-- //title -->
-	<!-- content -->
+<!--	 //title-->
+<!--	 content-->
 	<div class="sub-main-w3">
 		<form th:action="@{/login}" method="post">
 			<h2>登录
-				<i class="fas fa-level-down-alt"></i>
+				<!--<i class="fas fa-level-down-alt"></i>-->
 			</h2>
 			<div class="form-style-agile">
 				<label>
@@ -61,7 +61,7 @@
 				</label>
 				<input placeholder="Password" name="password" type="password" required="">
 			</div>
-			<!-- checkbox -->
+<!--			 checkbox-->
 			<div class="wthree-text">
 				<ul>
 					<li>
@@ -75,17 +75,17 @@
 					</li>
 				</ul>
 			</div>
-			<!-- //checkbox -->
+<!--			 //checkbox-->
 			<input type="submit" value="登录">
 		</form>
 	</div>
-	<!-- //content -->
+<!--	 //content-->
 
-	<!-- copyright -->
+<!--	 copyright-->
 	<div class="footer">
 		<p>Copyright &copy; 2020.hxpy All rights reserved.<a target="_blank" href="https://Peicaiyuan.github.io">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
 	</div>
-	<!-- //copyright -->
+<!--	 //copyright-->
 
 	<!-- Jquery -->
 	<script th:src="@{./static/css/js/jquery-3.3.1.min.js}"></script>
@@ -94,7 +94,6 @@
 	<!-- effect js -->
 	<script th:src="@{./static/css/js/canva_moving_effect.js}"></script>
 	<!-- //effect js -->
-
 </body>
 
 </html>
