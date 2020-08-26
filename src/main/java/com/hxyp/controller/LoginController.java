@@ -29,10 +29,20 @@ import org.springframework.web.servlet.ModelAndView;
  * @create 2020/8/25
  * @since 1.0.0
  */
-@RestController
+@Controller
 public class LoginController {
     @Autowired
     private ILoginService iLoginService;
+
+    @RequestMapping("log")
+    public String log(){
+        return "login";
+    }
+
+    @RequestMapping("index")
+    public String index(){
+        return "index";
+    }
 
     //登录验证
     @RequestMapping("/login")
@@ -42,10 +52,14 @@ public class LoginController {
         login.setLPassword(password);
         Integer result = iLoginService.identDiscrimination(login);
         //1为教师，2为学生
-        if (result != -1){
+        /*if (result != -1){
             return result == 1 ? "front/teacher" : "front/student";
         }
-        return "error";
+        return "账号密码错误";*/
+        if (result != -1){
+            return "index";
+        }
+        return "login";
     }
 
     //增加新用户

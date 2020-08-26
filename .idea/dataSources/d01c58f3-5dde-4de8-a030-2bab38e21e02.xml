@@ -1182,23 +1182,32 @@
       <DataType>varchar(25)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="293" name="lpower">
+    <column id="301" parent="293" name="lPower">
       <Position>4</Position>
       <DataType>tinyint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;2&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="302" parent="293" name="login_lid_idx">
+    <index id="302" parent="293" name="login_un">
+      <ColNames>lName</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="303" parent="293" name="login_lid_idx">
       <ColNames>lId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="303" parent="293" name="PRIMARY">
+    <key id="304" parent="293" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>lId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="304" parent="294" name="pId">
+    <key id="305" parent="293" name="login_un">
+      <ColNames>lName</ColNames>
+      <UnderlyingIndexName>login_un</UnderlyingIndexName>
+    </key>
+    <column id="306" parent="294" name="pId">
       <Position>1</Position>
       <Comment>项目id</Comment>
       <DataType>int|0s</DataType>
@@ -1206,61 +1215,61 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="294" name="pName">
+    <column id="307" parent="294" name="pName">
       <Position>2</Position>
       <Comment>项目名称</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="294" name="pSchResult">
+    <column id="308" parent="294" name="pSchResult">
       <Position>3</Position>
       <Comment>校赛结果</Comment>
       <DataType>tinyint unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="294" name="pEnProv">
+    <column id="309" parent="294" name="pEnProv">
       <Position>4</Position>
       <Comment>是否进入省赛</Comment>
       <DataType>tinyint unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="294" name="pProvResult">
+    <column id="310" parent="294" name="pProvResult">
       <Position>5</Position>
       <Comment>省赛结果</Comment>
       <DataType>tinyint unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="294" name="pEnNation">
+    <column id="311" parent="294" name="pEnNation">
       <Position>6</Position>
       <Comment>是否进入国赛</Comment>
       <DataType>tinyint unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="294" name="pNaResult">
+    <column id="312" parent="294" name="pNaResult">
       <Position>7</Position>
       <Comment>国赛结果</Comment>
       <DataType>tinyint unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="311" parent="294" name="project_un">
+    <index id="313" parent="294" name="project_un">
       <ColNames>pName</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="312" parent="294" name="project_pid_idx">
+    <index id="314" parent="294" name="project_pid_idx">
       <ColNames>pId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="313" parent="294" name="PRIMARY">
+    <key id="315" parent="294" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>pId</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="314" parent="294" name="project_un">
+    <key id="316" parent="294" name="project_un">
       <ColNames>pName</ColNames>
       <UnderlyingIndexName>project_un</UnderlyingIndexName>
     </key>
-    <column id="315" parent="295" name="sId">
+    <column id="317" parent="295" name="sId">
       <Position>1</Position>
       <Comment>学生id</Comment>
       <DataType>int|0s</DataType>
@@ -1268,52 +1277,52 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="316" parent="295" name="sName">
+    <column id="318" parent="295" name="sName">
       <Position>2</Position>
       <Comment>学生姓名</Comment>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="317" parent="295" name="sNumber">
+    <column id="319" parent="295" name="sNumber">
       <Position>3</Position>
       <Comment>学生学号</Comment>
       <DataType>bigint unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="318" parent="295" name="sMajor">
+    <column id="320" parent="295" name="sMajor">
       <Position>4</Position>
       <Comment>学生专业</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="319" parent="295" name="sCollege">
+    <column id="321" parent="295" name="sCollege">
       <Position>5</Position>
       <Comment>学生学院</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="295" name="sPhone">
+    <column id="322" parent="295" name="sPhone">
       <Position>6</Position>
       <Comment>学生联系方式</Comment>
       <DataType>varchar(33)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="295" name="sManager">
+    <column id="323" parent="295" name="sManager">
       <Position>7</Position>
       <Comment>是否为队长</Comment>
       <DataType>tinyint unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="322" parent="295" name="student_sid_idx">
+    <index id="324" parent="295" name="student_sid_idx">
       <ColNames>sId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="323" parent="295" name="PRIMARY">
+    <key id="325" parent="295" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>sId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="324" parent="296" name="tId">
+    <column id="326" parent="296" name="tId">
       <Position>1</Position>
       <Comment>老师id</Comment>
       <DataType>int|0s</DataType>
@@ -1321,57 +1330,57 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="325" parent="296" name="tName">
+    <column id="327" parent="296" name="tName">
       <Position>2</Position>
       <Comment>老师姓名</Comment>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="326" parent="296" name="tPhone">
+    <column id="328" parent="296" name="tPhone">
       <Position>3</Position>
       <Comment>老师联系方式</Comment>
       <DataType>varchar(33)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="327" parent="296" name="tNumber">
+    <column id="329" parent="296" name="tNumber">
       <Position>4</Position>
       <Comment>老师工号</Comment>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="328" parent="296" name="teacher_un">
+    <index id="330" parent="296" name="teacher_un">
       <ColNames>tNumber</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="329" parent="296" name="teacher_tid_idx">
+    <index id="331" parent="296" name="teacher_tid_idx">
       <ColNames>tId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="330" parent="296" name="PRIMARY">
+    <key id="332" parent="296" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>tId</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="331" parent="296" name="teacher_un">
+    <key id="333" parent="296" name="teacher_un">
       <ColNames>tNumber</ColNames>
       <UnderlyingIndexName>teacher_un</UnderlyingIndexName>
     </key>
-    <column id="332" parent="297" name="tId">
+    <column id="334" parent="297" name="tId">
       <Position>1</Position>
       <Comment>老师id</Comment>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="333" parent="297" name="sId">
+    <column id="335" parent="297" name="sId">
       <Position>2</Position>
       <Comment>学生id</Comment>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="334" parent="297" name="pId">
+    <column id="336" parent="297" name="pId">
       <Position>3</Position>
       <Comment>学生项目id</Comment>
       <DataType>int|0s</DataType>
