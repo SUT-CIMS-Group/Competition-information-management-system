@@ -25,7 +25,7 @@ import org.springframework.stereotype.Service;
 public interface ILoginService {
     boolean checkLogin(Login login);
 
-    Integer identDiscrimination(Login login);
+    Integer identDiscrimination(String lName,String lPassword);
 
     boolean insertNewUser(Login login);
 

@@ -38,8 +38,8 @@ public class ILoginServiceImpl implements ILoginService {
     }
 
     @Override
-    public Integer identDiscrimination(Login login) {
-        Login discrimination = loginMapper.findLogin(login.getLName(),login.getLPassword());
+    public Integer identDiscrimination(String lName,String lPassword) {
+        Login discrimination = loginMapper.findLogin(lName,lPassword);
         return discrimination != null ? discrimination.getLPower() : -1;
     }
 

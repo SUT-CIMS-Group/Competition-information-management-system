@@ -35,11 +35,6 @@ public class LoginController {
     @Autowired
     private ILoginService iLoginService;
 
-    @RequestMapping("log")
-    public String log(){
-        return "login";
-    }
-
     @RequestMapping("/")
     public String index(){
         return "index";
@@ -48,10 +43,7 @@ public class LoginController {
     //登录验证
     @PostMapping("/login")
     public String login(String username, String password){
-        Login login = new Login();
-        login.setLName(username);
-        login.setLPassword(password);
-        Integer result = iLoginService.identDiscrimination(login);
+        Integer result = iLoginService.identDiscrimination(username,password);
         //1为教师，2为学生
         /*if (result != -1){
             return result == 1 ? "front/teacher" : "front/student";
@@ -60,7 +52,7 @@ public class LoginController {
         if (result != -1){
             return "index";
         }
-        return "login";
+        return "redirect:/error";
     }
 
     //增加新用户
