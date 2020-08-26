@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hxyp.mapper.LoginMapper">
     <!--    查询登录用户是否存在-->
-    <select id="findLogin" parameterType="login" resultType="int">
-        select lPower from login where lName=#{lName} and lPassword=#{lPassword}
+    <select id="findLogin" resultType="login">
+        select lId,lName,lPassword,lPower from login where lName=#{lName} and lPassword=#{lPassword}
     </select>
 
 <!--    增加一个新用户，不加id号-->

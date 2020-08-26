@@ -13,8 +13,10 @@ package com.hxyp.mapper;
 
 import com.hxyp.entity.Project;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import javax.websocket.server.PathParam;
 import java.util.List;
 
 /**
@@ -32,11 +34,11 @@ public interface ProjectMapper {
     int insertProject(Project project);
 
 //    删除指定项目
-    int deleteProject(String projectName);
+    int deleteProject(@Param("projectName") String projectName);
 
 //    修改项目信息
     int updateProject(Project project);
 
 //    查询所有项目信息
-    List<Project> selectAllProjects(String pName);
+    List<Project> selectAllProjects(@Param("pName") String pName);
 }

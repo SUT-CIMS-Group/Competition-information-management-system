@@ -28,7 +28,7 @@
 			</div>
 			<ul class="layui-nav left fast-add" lay-filter="">
 				<li class="layui-nav-item">
-					<a th:href="@{javascript:;}">+新增</a>
+					<a href="javascript:;">+新增</a>
 					<dl class="layui-nav-child">
 						<!-- 二级菜单 -->
 						<dd>
@@ -119,13 +119,13 @@
 					var login = JSON.parse(localStorage.getItem("login"));
 					if(login){
 						if(login===0){
-							window.location.th:href='./login.html';
+							window.location.href='./login.html';
 							return false;
 						}else{
 							return false;
 						}
 					}else{
-						window.location.th:href='./login.html';
+						window.location.href='./login.html';
 						return false;
 					}
 				});

@@ -33,14 +33,14 @@ public class ILoginServiceImpl implements ILoginService {
     private LoginMapper loginMapper;
 
     @Override
-    public boolean checkLogin(Login login) {
-        return loginMapper.findLogin(login) != null;
+    public boolean checkLogin(@NotNull Login login) {
+        return loginMapper.findLogin(login.getLName(),login.getLPassword()) != null;
     }
 
     @Override
     public Integer identDiscrimination(Login login) {
-        Integer discrimination = loginMapper.findLogin(login);
-        return discrimination != null ? discrimination : -1;
+        Login discrimination = loginMapper.findLogin(login.getLName(),login.getLPassword());
+        return discrimination != null ? discrimination.getLPower() : -1;
     }
 
     @Override

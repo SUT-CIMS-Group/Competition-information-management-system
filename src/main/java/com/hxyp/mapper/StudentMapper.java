@@ -13,6 +13,7 @@ package com.hxyp.mapper;
 
 import com.hxyp.entity.Student;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Repository;
 
@@ -39,5 +40,5 @@ public interface StudentMapper {
     int updateStudent(Student student);
 
     //    查询所有学生信息
-    List<Student> selectAllStudents(String sName);
+    List<Student> selectAllStudents(@Param("sName") String sName);
 }

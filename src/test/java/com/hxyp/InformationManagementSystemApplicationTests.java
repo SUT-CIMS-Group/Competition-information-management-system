@@ -51,7 +51,7 @@ class InformationManagementSystemApplicationTests {
 
     @Test
     public void testFindLogin(){
-        System.out.println(loginMapper.findLogin(null));
+        System.out.println(loginMapper.findLogin("admin","123"));
     }
 
     /*

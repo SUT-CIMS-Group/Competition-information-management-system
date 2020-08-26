@@ -13,6 +13,7 @@ package com.hxyp.mapper;
 
 import com.hxyp.entity.Teacher;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -32,11 +33,11 @@ public interface TeacherMapper {
     int insertTeacher(Teacher teacher);
 
     //    删除指定老师
-    int deleteTeacher(String tNumber);
+    int deleteTeacher(@Param("tNumber") String tNumber);
 
     //    修改老师信息
     int updateTeacher(Teacher teacher);
 
     //    查询所有老师信息
-    List<Teacher> selectAllTeachers(String tName);
+    List<Teacher> selectAllTeachers(@Param("tName") String tName);
 }

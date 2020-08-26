@@ -13,6 +13,7 @@ package com.hxyp.mapper;
 
 import com.hxyp.entity.Login;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 
@@ -28,7 +29,7 @@ import org.springframework.stereotype.Repository;
 @Mapper
 public interface LoginMapper {
 //    通过判断账号密码返回lPower类型，来确定身份
-    Integer findLogin(Login login);
+    Login findLogin(@Param("lName")String lName, @Param("lPassword")String lPassword);
 
 //    增加新用户
     int insertLogin(Login login);
