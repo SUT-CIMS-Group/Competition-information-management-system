@@ -60,7 +60,7 @@ public class ILoginServiceImpl implements ILoginService {
     public boolean updateUser(@NotNull Login login) {
         Integer lId = login.getLId();
         Integer lPower = login.getLPower();
-        if (lId == null || lPower == null) {
+        if (lId == null || lPower == null) {//用户的id和身份不能为空
             return false;
         } else if (loginMapper.updateLogin(login) == 1) {
             return true;
