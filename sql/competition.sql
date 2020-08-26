@@ -26,10 +26,11 @@ CREATE TABLE `login` (
   `lId` int NOT NULL AUTO_INCREMENT COMMENT '账号自增id',
   `lName` varchar(25) DEFAULT NULL COMMENT '登录名',
   `lPassword` varchar(25) DEFAULT NULL COMMENT '密码',
-  `lpower` tinyint unsigned NOT NULL DEFAULT '2',
+  `lPower` tinyint unsigned NOT NULL DEFAULT '2',
   PRIMARY KEY (`lId`),
+  UNIQUE KEY `login_un` (`lName`),
   KEY `login_lid_idx` (`lId`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +39,7 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES (1,'test','123456',2),(2,'admin','admin',1),(3,'Tom','123456',2),(4,'Jack','123',1),(5,'Marry','123',1),(6,'Mack','1234',2);
+INSERT INTO `login` VALUES (1,'admin','admin',1),(2,'student','123.com',2);
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,7 +61,7 @@ CREATE TABLE `project` (
   PRIMARY KEY (`pId`),
   UNIQUE KEY `project_un` (`pName`),
   KEY `project_pid_idx` (`pId`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='项目情况【主表】';
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='项目情况【主表】';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +70,7 @@ CREATE TABLE `project` (
 
 LOCK TABLES `project` WRITE;
 /*!40000 ALTER TABLE `project` DISABLE KEYS */;
-INSERT INTO `project` VALUES (1,'物流管理系统',3,0,NULL,NULL,NULL),(3,'54sdfsdf',3,NULL,NULL,NULL,NULL),(8,'sdf12465',3,NULL,NULL,NULL,NULL),(9,'停车管理系统',3,NULL,NULL,NULL,NULL),(10,'税务管理系统',1,0,0,0,0);
+INSERT INTO `project` VALUES (1,'物流管理系统',3,0,NULL,NULL,NULL),(3,'54sdfsdf',3,NULL,NULL,NULL,NULL),(8,'sdf12465',3,NULL,NULL,NULL,NULL),(9,'停车管理系统',3,NULL,NULL,NULL,NULL),(10,'税务管理系统',1,0,0,0,0),(12,'房屋管理系统',1,0,0,0,0);
 /*!40000 ALTER TABLE `project` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -90,7 +91,7 @@ CREATE TABLE `student` (
   `sManager` tinyint unsigned DEFAULT NULL COMMENT '是否为队长',
   PRIMARY KEY (`sId`),
   KEY `student_sid_idx` (`sId`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,7 +100,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES (1,'张三',184312101,'计算机','自动化学院','13534342366',1),(3,'王五',184312103,'计算机','自动化学院','13413265542',0);
+INSERT INTO `student` VALUES (1,'张三',184312101,'计算机','自动化学院','13534342366',1),(3,'王五',184312103,'计算机','自动化学院','13413265542',0),(4,'李四',184312102,'计算机','自动化学院','19824889432',0);
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -166,4 +167,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-25 22:56:56
+-- Dump completed on 2020-08-26 15:58:32
