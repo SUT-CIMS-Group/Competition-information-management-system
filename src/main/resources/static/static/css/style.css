@@ -212,7 +212,7 @@ img {
 /*end reset*/
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'noto sans';
     font-size: 100%;
     background: #2196F3;
 }
@@ -224,9 +224,9 @@ h1 {
     color: #fff;
     letter-spacing: 3px;
     text-align: center;
-    font-style: italic;
+    font-style: Bold;
     margin: 3vw 1vw;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "noto sans";
 }
 
 h1 span,
