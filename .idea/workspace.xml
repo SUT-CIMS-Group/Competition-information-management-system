@@ -2,47 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6782f8b-7f21-4ee6-950b-b500b7080937" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hxyp/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hxyp/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/json/menu.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/admin/add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/admin/cate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/admin/edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/admin/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/admin/role-add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/admin/role.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/admin/rule.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/article/add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/article/category-add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/article/category-edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/article/category-edit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/article/category.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/article/category.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/article/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/article/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/article/复制 list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/echarts/echarts1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/echarts/echarts2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/echarts/echarts3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/echarts/echarts4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/echarts/echarts5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/echarts/echarts6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/echarts/echarts7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/echarts/echarts8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/echarts/echarts9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/member/add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/member/add2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/member/addInput.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/member/del.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/member/edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/member/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/member/list2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/member/password.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/order/add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/order/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pages/welcome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +188,7 @@
       <updated>1598279504583</updated>
       <workItem from="1598279508662" duration="20748000" />
       <workItem from="1598343878124" duration="7810000" />
-      <workItem from="1598420068933" duration="8313000" />
+      <workItem from="1598420068933" duration="8567000" />
     </task>
     <servers />
   </component>
