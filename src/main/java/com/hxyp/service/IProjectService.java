@@ -12,7 +12,8 @@
 package com.hxyp.service;
 
 import com.hxyp.entity.Project;
-import com.sun.istack.internal.NotNull;
+
+import java.util.List;
 
 /**
  * 〈一句话功能简述〉<br> 
@@ -24,4 +25,10 @@ import com.sun.istack.internal.NotNull;
  */
 public interface IProjectService {
     boolean insertProject(Project project);
+
+    boolean deleteProject(String projectName);
+
+    boolean updateProject(Project project);
+
+    List<Project> findProject(String projectName);
 }

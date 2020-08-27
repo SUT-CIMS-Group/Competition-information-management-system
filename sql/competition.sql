@@ -30,7 +30,7 @@ CREATE TABLE `login` (
   PRIMARY KEY (`lId`),
   UNIQUE KEY `login_un` (`lName`),
   KEY `login_lid_idx` (`lId`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES (1,'admin','admin',1),(2,'student','123.com',2);
+INSERT INTO `login` VALUES (1,'admin','admin',1),(2,'student','123.com',2),(3,'Mack','123.com',3),(4,'Jack','123.com',3),(5,'teacher','123.com',2);
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -52,7 +52,7 @@ DROP TABLE IF EXISTS `project`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `project` (
   `pId` int NOT NULL AUTO_INCREMENT COMMENT '项目id',
-  `pName` varchar(255) DEFAULT NULL COMMENT '项目名称',
+  `pName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '项目名称',
   `pSchResult` tinyint unsigned DEFAULT NULL COMMENT '校赛结果',
   `pEnProv` tinyint unsigned DEFAULT NULL COMMENT '是否进入省赛',
   `pProvResult` tinyint unsigned DEFAULT NULL COMMENT '省赛结果',
@@ -167,4 +167,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-26 15:58:32
+-- Dump completed on 2020-08-26 23:42:20
