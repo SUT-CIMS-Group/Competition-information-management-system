@@ -61,7 +61,7 @@ CREATE TABLE `project` (
   PRIMARY KEY (`pId`),
   UNIQUE KEY `project_un` (`pName`),
   KEY `project_pid_idx` (`pId`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='项目情况【主表】';
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='项目情况【主表】';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +70,7 @@ CREATE TABLE `project` (
 
 LOCK TABLES `project` WRITE;
 /*!40000 ALTER TABLE `project` DISABLE KEYS */;
-INSERT INTO `project` VALUES (1,'物流管理系统',3,0,NULL,NULL,NULL),(3,'54sdfsdf',3,NULL,NULL,NULL,NULL),(8,'sdf12465',3,NULL,NULL,NULL,NULL),(9,'停车管理系统',3,NULL,NULL,NULL,NULL),(10,'税务管理系统',1,0,0,0,0),(12,'房屋管理系统',1,0,0,0,0);
+INSERT INTO `project` VALUES (1,'物流管理系统',3,0,NULL,NULL,NULL),(8,'后台管理系统',NULL,NULL,NULL,NULL,NULL),(9,'停车管理系统',3,NULL,NULL,NULL,NULL),(10,'税务管理系统',1,0,0,0,0),(12,'房屋管理系统',1,0,0,0,0),(13,'图书管理系统',NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `project` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,15 +83,15 @@ DROP TABLE IF EXISTS `student`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `student` (
   `sId` int NOT NULL AUTO_INCREMENT COMMENT '学生id',
-  `sName` varchar(50) DEFAULT NULL COMMENT '学生姓名',
-  `sNumber` bigint unsigned DEFAULT NULL COMMENT '学生学号',
+  `sName` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '学生姓名',
+  `sNumber` varchar(20) NOT NULL COMMENT '学生学号',
   `sMajor` varchar(100) DEFAULT NULL COMMENT '学生专业',
   `sCollege` varchar(100) DEFAULT NULL COMMENT '学生学院',
   `sPhone` varchar(33) DEFAULT NULL COMMENT '学生联系方式',
-  `sManager` tinyint unsigned DEFAULT NULL COMMENT '是否为队长',
+  `sManager` tinyint unsigned NOT NULL COMMENT '是否为队长',
   PRIMARY KEY (`sId`),
   KEY `student_sid_idx` (`sId`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -100,7 +100,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES (1,'张三',184312101,'计算机','自动化学院','13534342366',1),(3,'王五',184312103,'计算机','自动化学院','13413265542',0),(4,'李四',184312102,'计算机','自动化学院','19824889432',0);
+INSERT INTO `student` VALUES (1,'张三','184312101','计算机','自动化学院','13534342366',1),(3,'王五','184312103','计算机','自动化学院','13413265542',0),(4,'周六','184312102','计算机','自动化学院','19824889432',2);
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -167,4 +167,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-26 23:42:20
+-- Dump completed on 2020-08-27 15:36:50
