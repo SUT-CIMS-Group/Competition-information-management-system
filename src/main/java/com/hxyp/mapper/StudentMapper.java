@@ -34,11 +34,13 @@ public interface StudentMapper {
     int insertStudent(Student student);
 
     //    删除指定学生
-    int deleteStudent(Integer sId);
+    int deleteStudent(Integer sNumber);
 
     //    修改学生信息
     int updateStudent(Student student);
 
     //    查询所有学生信息
-    List<Student> selectAllStudents(@Param("sName") String sName);
+    List<Student> selectAllStudents(@Param("sId") Integer sId);
+
+    List<Student> selectStudentByName(@Param("sName")String sName);
 }

@@ -59,7 +59,7 @@ class InformationManagementSystemApplicationTests {
     * */
     @Test
     public void testInsertStudent(){
-        Student stu = new Student(null,"李四",184312102,"计算机","自动化学院","19824889432",0);
+        Student stu = new Student(null,"李四","184312102","计算机","自动化学院","19824889432",0);
         studentMapper.insertStudent(stu);
         System.out.println(stu.getSId());
     }
@@ -71,7 +71,7 @@ class InformationManagementSystemApplicationTests {
 
     @Test
     public void testUpdateStudent(){
-        Student stu1 = new Student(3, "王五", 184312103, "计算机", "自动化学院", "13413265542", 0);
+        Student stu1 = new Student(3, "王五", "184312103", "计算机", "自动化学院", "13413265542", 0);
         System.out.println(studentMapper.updateStudent(stu1));
     }
 
@@ -79,7 +79,7 @@ class InformationManagementSystemApplicationTests {
     public void testSelectAllStudents(){
         System.out.println(studentMapper.selectAllStudents(null));
         System.out.println("===========================");
-        System.out.println(studentMapper.selectAllStudents("张三"));
+        System.out.println(studentMapper.selectAllStudents(1));
     }
 
     /*

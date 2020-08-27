@@ -15,6 +15,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigInteger;
+
 /**
  * 〈一句话功能简述〉<br>
  * 〈〉
@@ -29,7 +31,7 @@ import lombok.NoArgsConstructor;
 public class Student {
     private Integer sId;
     private String sName;
-    private long sNumber;
+    private String sNumber;
     private String sMajor;
     private String sCollege;
     private String sPhone;
