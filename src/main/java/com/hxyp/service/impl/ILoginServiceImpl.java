@@ -18,6 +18,8 @@ import com.sun.istack.internal.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 /**
  * 〈一句话功能简述〉<br>
@@ -38,10 +40,15 @@ public class ILoginServiceImpl implements ILoginService {
     }
 
     @Override
+    public Login getLogin(@NotNull String lName, @NotNull String lPassword) {
+        return loginMapper.findLogin(lName, lPassword);
+    }
+
+/*    @Override
     public Integer identDiscrimination(@NotNull String lName, @NotNull String lPassword) {
         Login discrimination = loginMapper.findLogin(lName, lPassword);
         return discrimination != null ? discrimination.getLPower() : -1;
-    }
+    }*/
 
     @Override
     public boolean insertNewUser(@NotNull Login login) {
@@ -72,5 +79,10 @@ public class ILoginServiceImpl implements ILoginService {
     public boolean deleteUser(@NotNull Integer lId) {
         if (loginMapper.deleteLogin(lId) == 1) return true;
         return false;
+    }
+
+    @Override
+    public List<Login> findAll() {
+        return loginMapper.findAll();
     }
 }

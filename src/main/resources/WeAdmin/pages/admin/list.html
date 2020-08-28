@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 	<head>
 		<meta charset="UTF-8">
@@ -54,20 +54,32 @@
 							<div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
 						</th>
 						<th>ID</th>
+						<th>用户名</th>
+						<th>权限等级</th>
+						<!--<th>ID</th>
 						<th>登录名</th>
 						<th>手机</th>
 						<th>邮箱</th>
 						<th>角色</th>
 						<th>加入时间</th>
 						<th>状态</th>
-						<th>操作</th>
+						<th>操作</th>-->
 				</thead>
 				<tbody>
-					<tr>
+					<tr th:each="login:${logins}">
 						<td>
 							<div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
 						</td>
-						<td>1</td>
+						<td>
+							<span th:text="${login.getLId()}"/>
+						</td>
+						<td>
+							<span th:text="${login.getLName()}"/>
+						</td>
+						<td>
+							<span th:text="${login.getLPower()}"/>
+						</td>
+						<!--<td>1</td>
 						<td>admin</td>
 						<td>18925139194</td>
 						<td>113664000@qq.com</td>
@@ -85,7 +97,7 @@
 							<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
 								<i class="layui-icon">&#xe640;</i>
 							</a>
-						</td>
+						</td>-->
 					</tr>
 				</tbody>
 			</table>

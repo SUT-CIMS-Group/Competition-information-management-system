@@ -15,6 +15,9 @@ import com.hxyp.entity.Login;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
+import sun.rmi.runtime.Log;
+
+import java.util.List;
 
 
 /**
@@ -39,4 +42,6 @@ public interface LoginMapper {
 
 //    删除用户
     int deleteLogin(Integer lId);
+
+    List<Login> findAll();
 }

@@ -14,6 +14,8 @@ package com.hxyp.service;
 import com.hxyp.entity.Login;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * 〈一句话功能简述〉<br> 
  * 〈〉
@@ -25,11 +27,15 @@ import org.springframework.stereotype.Service;
 public interface ILoginService {
     boolean checkLogin(Login login);
 
-    Integer identDiscrimination(String lName,String lPassword);
+    Login getLogin(String lName,String lPassword);
+
+//    Integer identDiscrimination(String lName,String lPassword);
 
     boolean insertNewUser(Login login);
 
     boolean updateUser(Login login);
 
     boolean deleteUser(Integer lId);
+
+    List<Login> findAll();
 }

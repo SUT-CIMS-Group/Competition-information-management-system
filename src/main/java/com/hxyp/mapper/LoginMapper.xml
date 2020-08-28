@@ -20,4 +20,8 @@
     <delete id="deleteLogin" parameterType="int">
         delete from login where lId=#{lId}
     </delete>
+
+    <select id="findAll" resultType="login">
+        select lId,lName,lPassword,lPower from login
+    </select>
 </mapper>
